@@ -24,7 +24,7 @@ function createCompanies() {
   const cost = minifaker.number({ min: 1000000, max: 9999999 });
   const impliedValue = minifaker.number({ min: 10000000, max: 99999999 });
   const ownershipPercentage = impliedValue / cost / 100;
-  const founded = new Date(minifaker.date({ from: new Date('2010-01-01')})).toISOString();
+  const founded = new Date(minifaker.date({ from: new Date('2010/1/1')})).toISOString();
 
   return `${fundId},${name},${logo},${cost},${ownershipPercentage},${impliedValue},${founded}\n`;
 }
