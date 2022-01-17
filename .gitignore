@@ -1,6 +1,8 @@
 /node_modules
 /yarn-error.log
 /dist
+funds.csv
+companies.csv
 
 .env
 .DS_Store
