@@ -13,7 +13,7 @@
   "private": true,
   "scripts": {
     "create-db": "psql -U postgres < db/schema.sql",
-    "seed": "yarn create-db && node db/main.js",
+    "seed": "yarn create-db && node db/main.js && rm companies.csv && rm funds.csv",
     "lint": "eslint . --ext .ts",
     "build": "tsc",
     "prestart": "yarn build",
