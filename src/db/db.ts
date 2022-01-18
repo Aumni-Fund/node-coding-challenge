@@ -11,9 +11,4 @@ const pool = new Pool({
     port: Number(PGPORT),
 });
 
-// const db = {
-//     query: pool.query,
-//     connect: pool.connect
-// };
-
 export default pool;
