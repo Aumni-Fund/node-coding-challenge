@@ -1,8 +1,8 @@
 <img src="https://aumni-public.s3.amazonaws.com/AumniLogoColor.png" alt="Aumni Logo" width="200" height="55">
 
-# NodeJs Coding Challenge
+# Node.js Coding Challenge
 
-The purpose of this coding challenge is to gauge knowledge in NodeJs and JavaScript. In the coding challenge, you will build a NodeJs api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
+The purpose of this coding challenge is to gauge knowledge in Node.js and Typescript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
 
 ## Terminology
 
@@ -13,21 +13,23 @@ The purpose of this coding challenge is to gauge knowledge in NodeJs and JavaScr
 
 1. Clone/Download this repository. We have seeded some data for you in the database.
 
-2. Make your first commit by filling out the `code-challenge-notes.md` file in the root of this directory.
+2. Checkout branch and name it after yourself.
 
-3. Once you have made your first commit you will have 72 hours to make your final commit to complete the code challenge.
+3. Make your first commit by filling out the `code-challenge-notes.md` file in the root of this directory.
 
-4. Please do **NOT** push your code challenge solution to a public repository.
+4. Once you have made your first commit you will have 72 hours to make your final commit to complete the code challenge.
 
-5. This is a backend coding challenge. Please do **NOT** spend your time building out any kind of frontend UI.
+5. Please do **NOT** push your code challenge solution to a public repository.
 
-6. You are allowed to install and use third-party packages.
+6. This is a backend coding challenge. Please do **NOT** spend your time building out any kind of frontend UI.
+
+7. You are allowed to install and use third-party packages.
 
 ## Getting Started
 
 1. Run `yarn` to install dependencies.
 
-2. Run `yarn start` to start the server. The default URL and Port is `http://localhost:3000`.
+2. Run `yarn start` to seed the database and start the server. The default URL and Port is `http://localhost:3000`.
 
 ## Goals
 
@@ -42,15 +44,38 @@ The purpose of this coding challenge is to gauge knowledge in NodeJs and JavaScr
 - [ ] Setup and implement authentication with your endpoints
 - [ ] Logging
 - [ ] Expand the data set
-- [ ] Better/more comprehensive filters
+- [ ] Additional comprehensive filters
 
 ## Acceptance Criteria
 
 - [ ] You have filled out the _required_ parts of the `code-challenge-notes.md` and made your first commit.
 - [ ] The code is well organized.
-- [ ] The code follows NodeJs/JavaScript best practices.
+- [ ] The code follows Node.js/Typescript best practices.
 - [ ] Your Git commit history is clean and meaningful.
 
 ## Submission
 
-1. ????
+1. When you have your final commit complete. Push up your branch back up to the repository.
+2. We will review it and contact you shortly with the next steps.
+
+## Example of an Endpoint Schema Structure
+
+For an endpoint like `/funds/1/33`, you would return a response like:
+
+````
+{
+  "id": 1,
+  "name": "Hodkiewicz-Veum Ventures",
+  "companies": [
+    {
+      "id": 62,
+      "name": "Hauck Infrastructure Inc.",
+      "logo": "https://via.placeholder.com/200",
+      "cost": 9638817,
+      "ownershipPercentage": 0.06402042802555542,
+      "impliedValue": 61708119,
+      "founded": "2012-10-28"
+    }
+  ]
+}```
+````
