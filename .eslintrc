@@ -12,5 +12,12 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["/src/db/seed.ts", "*.test.ts"] }
+    ],
+    "no-console": "off"
+  }
 }
