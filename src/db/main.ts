@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import minifaker from 'minifaker';
 import 'minifaker/locales/en';
 import { CsvParserStream, parse } from '@fast-csv/parse';
@@ -5,15 +6,16 @@ import { PoolClient } from 'pg';
 
 import db from './db';
 
+minifaker.setSeed('dev');
+
 const createFunds = () => {
     const name = `${minifaker.lastName()}-${minifaker.lastName()} Ventures`;
-    const content = minifaker.word();
-    return `${name},${content}\n`;
+    return `${name}\n`;
 };
 
 const createCompanies = () => {
   const fundId = minifaker.number({ min:1, max: 30 });
-  const name = `${minifaker.lastName()} ${minifaker.jobArea()} Inc.`;
+  const name = `${minifaker.lastName()} ${minifaker.jobArea()} ${minifaker.jobType()}s`;
   const logo = minifaker.imageUrlFromPlaceholder({ width: 200 });
   const cost = minifaker.number({ min: 1000000, max: 9999999 });
   const impliedValue = minifaker.number({ min: 10000000, max: 99999999 });
@@ -32,21 +34,17 @@ const createWriteStream = (client: PoolClient, query: string) =>
   parse({ ignoreEmpty: true })
     .on('error', error => console.error(error))
     .on('data', row => {
-      client.query(query, row, (err: Error, res: { rowCount: number; }) => {
-          if (err) {
-              console.log(err.stack);
-          } else {
-              console.log(`inserted ${  res.rowCount  } row:`, row);
-          }
+      client.query(query, row, (err: Error) => {
+          if (err) throw err;
       });
     })
     .on('end', (rowCount: number) => console.log(`Parsed ${rowCount} rows`));
 
 const insertFundsQuery =
-'INSERT INTO funds (name, content) VALUES ($1, $2)';
+'INSERT INTO funds (name) VALUES ($1)';
 
 const insertCompaniesQuery =
-'INSERT INTO companies (fundId, name, logo, cost, ownershipPercentage, impliedValue, founded) VALUES ($1, $2, $3, $4, $5, $6, $7)';
+'INSERT INTO companies (fund_id, name, logo, cost, ownership_percentage, implied_value, founded) VALUES ($1, $2, $3, $4, $5, $6, $7)';
 
 const writeToStream = async (createContent: () => string, stream: CsvParserStream<FundRow, FundRow>, rows = 30) => {
   for (let index = 0; index < rows; index += 1) {

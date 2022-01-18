@@ -11,8 +11,7 @@ CREATE DATABASE funds;
 CREATE TABLE IF NOT EXISTS Funds
 (
     id SERIAL PRIMARY KEY ,
-    name VARCHAR (100) UNIQUE NOT NULL,
-    content text
+    name VARCHAR (100) UNIQUE NOT NULL
 );
 
 -- Changes the owner of the table to postgres which is the default when installing postgres
@@ -23,12 +22,12 @@ ALTER TABLE Funds
 CREATE TABLE IF NOT EXISTS Companies
 (
     id SERIAL PRIMARY KEY,
-    fundId INTEGER,
+    fund_id INTEGER,
     name VARCHAR (100) UNIQUE NOT NULL,
     logo VARCHAR (100),
     cost INTEGER,
-    ownershipPercentage FLOAT,
-    impliedValue INTEGER,
+    ownership_percentage FLOAT,
+    implied_value INTEGER,
     founded DATE
 );
 
