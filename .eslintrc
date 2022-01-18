@@ -16,7 +16,7 @@
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["/src/db/main.ts", "*.test.ts"] }
+      { "devDependencies": ["/src/db/seed.ts", "*.test.ts"] }
     ],
     "no-console": "off"
   }

@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "create-db": "psql -U postgres < schema.sql",
-    "seed": "yarn create-db && ts-node -r dotenv/config src/db/main.ts",
+    "seed": "yarn create-db && ts-node -r dotenv/config src/db/seed.ts",
     "lint": "eslint . --ext .ts",
     "start": "tsnd --rs -r dotenv/config src/index.ts",
     "test": "echo \"Error: Someone needs to set up testing!\" && exit 1"
