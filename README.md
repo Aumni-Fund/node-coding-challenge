@@ -27,9 +27,10 @@ The purpose of this coding challenge is to gauge knowledge in Node.js and TypeSc
 
 ## Getting Started
 
-1. Run `yarn` to install dependencies.
-
-2. Run `yarn start` to seed the database and start the server. The default URL and Port is `http://localhost:3000`.
+1. Ensure PostgreSQL is installed and running on your machine
+2. Run `yarn` to install dependencies.
+3. Run `yarn seed` to create and seed the database.
+4. Run `yarn start` to start the server. The default URL and Port is `http://localhost:3000`.
 
 ## Goals
 
@@ -74,6 +75,8 @@ For an endpoint like `/funds/1/33`, you would return a response:
 - [ ] The code is well organized.
 - [ ] The code follows Node.js/TypeScript best practices.
 - [ ] Your Git commit history is clean and meaningful.
+- [ ] The code should be free of linting errors.
+- [ ] You should have passing unit tests for at least one route.
 
 ## Submission
 

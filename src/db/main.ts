@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import minifaker from 'minifaker';
 import 'minifaker/locales/en';
 import { CsvParserStream, parse } from '@fast-csv/parse';

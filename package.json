@@ -2,7 +2,6 @@
   "name": "node-coding-challenge",
   "version": "1.0.0",
   "description": "Aumni coding challenge for node.js",
-  "main": "dist/index.js",
   "repository": "git@github.com:Aumni-Fund/node-coding-challenge.git",
   "contributors": [
     "Josh Kimble <jkimble@aumni.fund>",
@@ -13,22 +12,19 @@
   "private": true,
   "scripts": {
     "create-db": "psql -U postgres < schema.sql",
-    "seed": "yarn create-db && node -r dotenv/config dist/db/main.js",
+    "seed": "yarn create-db && ts-node -r dotenv/config src/db/main.ts",
     "lint": "eslint . --ext .ts",
-    "build": "tsc && yarn seed",
-    "prestart": "yarn build",
-    "start": "node .",
+    "start": "tsnd --rs -r dotenv/config src/index.ts",
     "test": "echo \"Error: Someone needs to set up testing!\" && exit 1"
   },
   "dependencies": {
-    "@fast-csv/parse": "^4.3.6",
     "dotenv": "^12.0.0",
-    "eslint-config-prettier": "^8.3.0",
     "express": "^4.17.2",
-    "minifaker": "^1.33.1",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "typescript": "^4.5.4"
   },
   "devDependencies": {
+    "@fast-csv/parse": "^4.3.6",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.9",
     "@types/pg": "^8.6.4",
@@ -36,7 +32,10 @@
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.7.0",
     "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
-    "typescript": "^4.5.4"
+    "minifaker": "^1.33.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
   }
 }
