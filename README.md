@@ -2,7 +2,7 @@
 
 # Node.js Coding Challenge
 
-The purpose of this coding challenge is to gauge knowledge in Node.js and Typescript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
+The purpose of this coding challenge is to gauge knowledge in Node.js and TypeScript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
 
 ## Terminology
 
@@ -39,30 +39,11 @@ The purpose of this coding challenge is to gauge knowledge in Node.js and Typesc
 - [ ] `/funds/:id/:companyId` - Will return a specific fund and company data
 - [ ] `/funds/:id/?minCost=100&maxCost=100000` - Filter the fund data
 
-## Stretch Goals
+### Example of an Endpoint Schema Structure
 
-- [ ] Setup and implement authentication with your endpoints
-- [ ] Logging
-- [ ] Expand the data set
-- [ ] Additional comprehensive filters
+For an endpoint like `/funds/1/33`, you would return a response:
 
-## Acceptance Criteria
-
-- [ ] You have filled out the _required_ parts of the `code-challenge-notes.md` and made your first commit.
-- [ ] The code is well organized.
-- [ ] The code follows Node.js/Typescript best practices.
-- [ ] Your Git commit history is clean and meaningful.
-
-## Submission
-
-1. When you have your final commit complete. Push up your branch back up to the repository.
-2. We will review it and contact you shortly with the next steps.
-
-## Example of an Endpoint Schema Structure
-
-For an endpoint like `/funds/1/33`, you would return a response like:
-
-````
+```json
 {
   "id": 1,
   "name": "Hodkiewicz-Veum Ventures",
@@ -77,5 +58,24 @@ For an endpoint like `/funds/1/33`, you would return a response like:
       "founded": "2012-10-28"
     }
   ]
-}```
-````
+}
+```
+
+## Stretch Goals
+
+- [ ] Setup and implement authentication with your endpoints
+- [ ] Logging
+- [ ] Expand the data set
+- [ ] Additional comprehensive filters
+
+## Acceptance Criteria
+
+- [ ] You have filled out the _required_ parts of the `code-challenge-notes.md` and made your first commit.
+- [ ] The code is well organized.
+- [ ] The code follows Node.js/TypeScript best practices.
+- [ ] Your Git commit history is clean and meaningful.
+
+## Submission
+
+1. When you have your final commit complete. Push up your branch back up to the repository.
+2. We will review it and contact you shortly with the next steps.
