@@ -1,14 +1,18 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response } from 'express';
+import expressPinoLogger from 'express-pino-logger';
+
+import logger from './logger';
 
 const app = express();
 const port = 3000;
 
 export default () => {
-  app.get("/", (_req: Request, res: Response) => {
-    res.send("Hello World!");
+  app.use(expressPinoLogger({ logger }));
+  app.get('/', (_req: Request, res: Response) => {
+    res.send('Hello World!');
   });
 
   app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    logger.info(`app listening at http://localhost:${port}`);
   });
 };
