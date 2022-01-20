@@ -13,6 +13,8 @@ describe('GET /health - a simple api endpoint', () => {
   });
 
   it('Health 500 API Request', async () => {
+    // database connection must be ended last
+    // you must end database after all tests have run or in the last test
     pool.end();
     const result = await agent.get('/health');
 
