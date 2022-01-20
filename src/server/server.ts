@@ -1,16 +1,8 @@
-import express, { Request, Response } from 'express';
+import app from './app';
 
-const app = express();
 const port = 3000;
 
-export default () => {
-  app.get('/health', (_req: Request, res: Response) => {
-    res.status(200).json({
-      message: 'Ok',
-    });
-  });
-
+export default async () =>
   app.listen(port, () => {
     console.info(`app listening at http://localhost:${port}`);
   });
-};
