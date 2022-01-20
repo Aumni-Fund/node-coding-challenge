@@ -1,6 +1,6 @@
 import express, { json, urlencoded, Request, Response } from 'express';
 
-import pool from '../db/db';
+import pool from '../db/pool';
 
 const app = express();
 

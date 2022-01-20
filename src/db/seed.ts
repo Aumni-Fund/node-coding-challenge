@@ -3,7 +3,7 @@ import 'minifaker/locales/en';
 import { CsvParserStream, parse, Row } from '@fast-csv/parse';
 import { PoolClient } from 'pg';
 
-import db from './db';
+import db from './pool';
 
 minifaker.setSeed('dev');
 

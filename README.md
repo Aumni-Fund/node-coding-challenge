@@ -2,7 +2,11 @@
 
 # Node.js Coding Challenge
 
-The purpose of this coding challenge is to gauge knowledge in Node.js and TypeScript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
+The purpose of this coding challenge is to gauge knowledge in Node.js and TypeScript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data.
+
+We've provided a basic TypeScript boilerplate app that provides a server, db, and testing harness. Please feel free to move things around according to your preference, e.g., moving the health check to your preferred file structure.
+
+Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
 
 ## Terminology
 

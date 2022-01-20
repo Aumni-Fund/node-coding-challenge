@@ -1,5 +1,5 @@
 import request from 'supertest';
-import pool from '../db/db';
+import pool from '../db/pool';
 import app from '../server/app';
 
 describe('GET /health - a simple api endpoint', () => {
