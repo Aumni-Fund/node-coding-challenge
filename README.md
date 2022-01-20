@@ -31,7 +31,7 @@ Some helpful terminology to help you understand the domain-specific terms:
 
 ## Getting Started
 
-1. Ensure PostgreSQL is installed and running on your machine
+1. Ensure PostgreSQL is installed and running on your machine. **Note:** You may need to create the `postgres` user, i.e., `createuser -s postgres`
 2. Run `yarn` to install dependencies.
 3. Run `yarn seed` to create and seed the database.
 4. Run `yarn start` to start the server. The default URL and Port is `http://localhost:3000`.
