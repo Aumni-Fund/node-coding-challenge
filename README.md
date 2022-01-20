@@ -2,9 +2,13 @@
 
 # Node.js Coding Challenge
 
-The purpose of this coding challenge is to gauge knowledge in Node.js and TypeScript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data. Below you will find some helpful terminology to help you understand what these domain-specific terms mean.
+The purpose of this coding challenge is to gauge knowledge in Node.js and TypeScript. In the coding challenge, you will build a Node.js api interface that an end user can consume to get a small subset of Aumni data.
+
+We have provided a basic TypeScript boilerplate app that provides a server, PostgreSQL database, and testing harness. Please feel free to move things around according to your preference, e.g., moving the health check to your preferred file structure.
 
 ## Terminology
+
+Some helpful terminology to help you understand the domain-specific terms:
 
 - **Fund** - A Fund is a type of [Investment Vehicle](https://www.investopedia.com/terms/i/investmentvehicle.asp) that invests the money that it has raised into various **Companies**.
 - **Company** - A Company that a **Fund** invests in. Traditionally called a Portfolio Company from the perspective of the **Fund**. This is typically a start-up company that is trying to raise money.

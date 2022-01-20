@@ -1,9 +1,11 @@
 /node_modules
 /yarn-error.log
+/coverage
 
 .DS_Store
 .vscode
 .tool-versions
+package-lock.json
 
 # VSCode Workspaces
 *.code-workspace
