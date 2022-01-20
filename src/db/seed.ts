@@ -3,7 +3,7 @@ import 'minifaker/locales/en';
 import { CsvParserStream, parse, Row } from '@fast-csv/parse';
 import { PoolClient } from 'pg';
 
-import db from './pool';
+import pool from './pool';
 
 minifaker.setSeed('dev');
 
@@ -43,7 +43,8 @@ const writeToStream = async (createContent: () => string, stream: CsvParserStrea
   stream.end();
 };
 
-db.connect()
+pool
+  .connect()
   .then(client => {
     const fundsWriteStream = createWriteStream(client, insertFundsQuery);
     writeToStream(createFunds, fundsWriteStream);
