@@ -71,7 +71,7 @@ For an endpoint like `/funds/1/33`, you would return a response:
 - [ ] Setup and implement authentication with your endpoints
 - [ ] Logging
 - [ ] Expand the data set
-- [ ] Additional comprehensive filters and/or funds
+- [ ] Additional comprehensive filters on companies and/or funds
 
 ## Acceptance Criteria
 
