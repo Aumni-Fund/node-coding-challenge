@@ -31,7 +31,7 @@ Some helpful terminology to help you understand the domain-specific terms:
 
 ## Getting Started
 
-1. Ensure PostgreSQL is installed and running on your machine
+1. Ensure PostgreSQL is installed and running on your machine. **Note:** You may need to create the `postgres` user, i.e., `createuser -s postgres`
 2. Run `yarn` to install dependencies.
 3. Run `yarn seed` to create and seed the database.
 4. Run `yarn start` to start the server. The default URL and Port is `http://localhost:3000`.
@@ -42,7 +42,7 @@ Some helpful terminology to help you understand the domain-specific terms:
 - [ ] `/funds/` - Will return all funds and companies data
 - [ ] `/funds/:id` - Will return a specific fund
 - [ ] `/funds/:id/:companyId` - Will return a specific fund and company data
-- [ ] `/funds/:id/?minCost=100&maxCost=100000` - Filter the fund data
+- [ ] `/funds/:id/?minCost=100&maxCost=100000` - Filter the companies for a specific fund
 
 ### Example of an Endpoint Schema Structure
 
@@ -71,7 +71,7 @@ For an endpoint like `/funds/1/33`, you would return a response:
 - [ ] Setup and implement authentication with your endpoints
 - [ ] Logging
 - [ ] Expand the data set
-- [ ] Additional comprehensive filters
+- [ ] Additional comprehensive filters on companies and/or funds
 
 ## Acceptance Criteria
 
