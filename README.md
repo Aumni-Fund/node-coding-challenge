@@ -42,7 +42,7 @@ Some helpful terminology to help you understand the domain-specific terms:
 - [ ] `/funds/` - Will return all funds and companies data
 - [ ] `/funds/:id` - Will return a specific fund
 - [ ] `/funds/:id/:companyId` - Will return a specific fund and company data
-- [ ] `/funds/:id/?minCost=100&maxCost=100000` - Filter the fund data
+- [ ] `/funds/:id/?minCost=100&maxCost=100000` - Filter the companies for a specific fund
 
 ### Example of an Endpoint Schema Structure
 
@@ -71,7 +71,7 @@ For an endpoint like `/funds/1/33`, you would return a response:
 - [ ] Setup and implement authentication with your endpoints
 - [ ] Logging
 - [ ] Expand the data set
-- [ ] Additional comprehensive filters
+- [ ] Additional comprehensive filters and/or funds
 
 ## Acceptance Criteria
 
