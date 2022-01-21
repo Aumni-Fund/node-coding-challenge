@@ -1,16 +1,12 @@
-import express, { json, urlencoded, Request, Response } from 'express';
-import pool from '../db/pool';
+import express, { json, urlencoded } from 'express';
+import healthCheckRoutes from './routes/healthCheck';
+import fundRoutes from './routes/funds';
 
 const app = express();
-
-const healthCheck = (req: Request, res: Response) =>
-  pool
-    .query('SELECT 1')
-    .then(() => res.sendStatus(200))
-    .catch((error: Error) => res.status(500).json({ message: 'Internal Server Error', error }));
-
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.get('/health', healthCheck);
+
+app.use('/health', healthCheckRoutes);
+app.use('/funds', fundRoutes);
 
 export default app;
