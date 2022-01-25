@@ -85,4 +85,4 @@ For an endpoint like `/funds/1/33`, you would return a response:
 ## Submission
 
 1. When you have your final commit complete, please zip up your entire folder.
-2. Once you have coding submission zipped up, please upload it as per ![UploadSumbmission.png](https://github.com/Aumni-Fund/node-coding-challenge/blob/master/UploadSumbmission.png).
+2. Once you have coding submission zipped up, please upload it as per ![UploadSubmission.png](https://github.com/Aumni-Fund/node-coding-challenge/blob/master/UploadSubmission.png).
